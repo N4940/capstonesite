@@ -1,0 +1,129 @@
+/* Color Theme Swatches in Hex */
+$testMain-v3-1-hex: #30B889;
+$testMain-v3-2-hex: #2F3D38;
+$testMain-v3-3-hex: #172224;
+$testMain-v3-4-hex: #163E69;
+$testMain-v3-5-hex: #0065D1;
+
+/* Color Theme Swatches in RGBA */
+$testMain-v3-1-rgba: rgba(48,184,137, 1);
+$testMain-v3-2-rgba: rgba(47,61,56, 1);
+$testMain-v3-3-rgba: rgba(23,34,36, 1);
+$testMain-v3-4-rgba: rgba(22,62,105, 1);
+$testMain-v3-5-rgba: rgba(0,101,209, 1);
+
+/* Color Theme Swatches in HSLA */
+$testMain-v3-1-hsla: hsla(159, 58, 45, 1);
+$testMain-v3-2-hsla: hsla(158, 12, 21, 1);
+$testMain-v3-3-hsla: hsla(189, 22, 11, 1);
+$testMain-v3-4-hsla: hsla(211, 65, 24, 1);
+$testMain-v3-5-hsla: hsla(211, 100, 40, 1);
+
+$highlight  : #30B889;
+$midtone    : #2F3D38;
+$midtone-2  : #163E69;
+$dark       : #0065D1;
+$dark-2     : #172224;
+
+:root{
+    background-color: $dark-2;
+    
+}
+*{
+    font-size: 13pt;
+    color: rgb(211, 233, 229);
+    padding: 0px;
+    margin: 0px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p{
+    padding: 7px;
+}
+h4{
+    padding:10px
+}
+
+#hero-header{
+    font-size: 200px;
+    margin-top: 10vh;    
+    margin-bottom: 23vh;
+}
+@media(max-width:700px){
+    #hero-header{
+        font-size: 20vw;
+    }
+}
+#hero-button{
+    background-color:#30B889;
+    border:none;
+    border-radius: 4px;
+    padding: 3px 10px;
+    margin-bottom: 23vh;
+}
+#hero-info{
+    max-width: 50vw;
+    margin:0px;
+    padding: 0px;
+} 
+#hero-info > * {
+    border-radius: 12px;
+    margin: 10px;
+    padding: 10px;
+    min-width:16em;
+    background-color: $midtone-2;
+}
+#container{
+    background-color: $midtone;
+}
+.center-layout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.column-layout{
+    display: flex;
+    flex-direction: row;
+}
+.unstyled-list{
+    list-style: none;
+    margin: 0px;
+    padding:0px;
+}
+.grid-layout{
+    display: inline-grid;
+    grid-template-columns: repeat(2, 10px [col-start]) ;
+    grid-template-rows: repeat(6, 10px [col-start]) ; ;
+}.grid-layout > *{
+    border: .5px $midtone-2 solid;
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+
+//page 2//
+
+.navigation-parent{
+    background-color:$midtone;
+}
+.navigation-parent.column-layout > * {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.navigation-item{
+    padding: 10px;
+}
+.navigation-item:hover{
+    transition: 400ms;
+    background: $highlight;
+}
+
+.row-layout{
+    display: flex;
+    flex-direction: column;
+}
+
+.article-layout{
+
+}
