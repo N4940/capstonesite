@@ -1,0 +1,95 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  color: rgb(210, 210, 210);
+}
+
+:root {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 24px;
+}
+
+#container {
+  background: rgb(32, 32, 32);
+  padding: 2em;
+  margin: 0vh 15vw 5vh 15vw;
+}
+
+#dark-design {
+  background-color: rgb(22, 22, 22);
+}
+#dark-design ol, #dark-design ul {
+  color: rgb(123, 123, 123);
+  margin-bottom: 1rem;
+  list-style: disc inside none;
+  text-indent: 1rem;
+}
+#dark-design ol li, #dark-design ul li {
+  padding: 0.13rem;
+  color: rgb(163, 163, 163);
+}
+
+#spilledwalletimg {
+  width: 230px;
+}
+
+#cursorimg {
+  width: 230px;
+}
+
+.content-section p {
+  padding: 0em 0em 1em 0em;
+  margin: 0px;
+  line-height: 1.7em;
+}
+.content-section .title-section {
+  margin-bottom: 1em;
+}
+.content-section .image-container {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+.content-section .image-container img {
+  max-height: 100%;
+  max-width: 100%;
+  -o-object-position: center;
+     object-position: center;
+}
+.content-section .row-layout {
+  gap: 2rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+.shape-image.right {
+  float: right;
+}
+
+.shape-image.left {
+  float: left;
+}
+
+h1, h2, h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  font-size: 4rem;
+  padding-bottom: 2rem;
+  margin-left: -8px;
+}
+
+h2 {
+  font-size: 3rem;
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}/*# sourceMappingURL=darkdesign.css.map */
