@@ -4,35 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="/css/Animations.css">
 </head>
 <body>
     <div class = "navigation"> 
         <div>icon</div>
-        <div>Gallary</div>
-        <div>about</div>
+        <div onclick = "linkTo('/pages/page2.html')">Gallary</div>
+        <div onclick="linkto('/pages/about.html')">about</div>
     </div>
     <div>
         <section class = "hero-title">
             <h1>Learn about UX design</h1>
-            <img src="https://images.unsplash.com/photo-1645333504715-f440a7b78e93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" alt="captivating background image">
+            <div class = "img-con">
+                <img src="https://images.unsplash.com/photo-1645333504715-f440a7b78e93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" alt="captivating background image">
+            </div>
         </section>
-        <div class = "hero-content">
+        
+        <div class = "hero-content slide-from-right">
             <section>
                 <div>
                     <h2> why design matters</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, illum beatae laborum quia nisi saepe eos nihil consequuntur laboriosam, delectus minus neque vel provident consequatur? Eum corporis illo vitae porro ullam error animi qui!</p>
                 </div>
-                <img src="https://images.unsplash.com/photo-1645333504715-f440a7b78e93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" alt="">
+                <div class = "img-con">
+                    <img src="https://images.unsplash.com/photo-1645333504715-f440a7b78e93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" alt="vomj">
+                </div>
+                
             </section>
+
             <section>
-                <h2>About this site</h2>
+                <div>
+                    <h2>About this site</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam eum, harum quibusdam saepe ipsum, fuga fugiat tempore doloremque, est quia commodi at animi optio?</p>
+                </div>
+                <div class = "img-con">
+                    <img src="https://images.unsplash.com/photo-1645333504715-f440a7b78e93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" alt="interesting image">
+                </div>
             </section>
         </div>
             
         </section>
     </div>
+    <script src= "/scripts/general.js"></script>
 </body>
 </html>

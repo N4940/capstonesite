@@ -1,0 +1,11 @@
+@keyframes slideFromRight {
+  from {
+    padding-left: 200%;
+  }
+  to {
+    padding-left: 0%;
+  }
+}
+.slide-From-Right {
+  animation: 0.4s ease 0s 1 slideFromRight;
+}/*# sourceMappingURL=Animations.css.map */

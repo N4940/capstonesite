@@ -1,0 +1,27 @@
+body {
+  background-color: rgb(12, 12, 12);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gallary-parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-gap: 0.6rem;
+}
+
+.gallary-item {
+  background-color: rgb(123, 123, 123);
+  padding: 0.4rem;
+  border-radius: 10px;
+}
+.gallary-item ul {
+  margin: 0px;
+  padding: 0px;
+}
+.gallary-item ul li {
+  list-style: none;
+  text-align: center;
+}
+.gallary-item * {
+  max-width: 100%;
+}/*# sourceMappingURL=Gallary.css.map */

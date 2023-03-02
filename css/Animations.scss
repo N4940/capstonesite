@@ -1,0 +1,12 @@
+@keyframes slideFromRight{
+    from{
+        padding-left: 200%;
+    }
+    to{
+        padding-left:0%;
+    }
+}
+.slide-from-right{
+    animation: .4s ease 0s 1 slideFromRight;
+}
+//use activation class tpo activate animations
