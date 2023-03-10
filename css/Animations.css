@@ -1,11 +1,12 @@
 @keyframes slideFromRight {
   from {
-    padding-left: 200%;
+    width: 0%;
   }
   to {
-    padding-left: 0%;
+    width: 100%;
   }
 }
-.slide-From-Right {
-  animation: 0.4s ease 0s 1 slideFromRight;
+.slide-from-right.active {
+  animation: slideFromRight 5s ease 0;
+  overflow-x: hidden;
 }/*# sourceMappingURL=Animations.css.map */
