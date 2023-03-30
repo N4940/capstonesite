@@ -70,22 +70,4 @@
 }
 .hero-content section img {
   max-height: 90%;
-}
-
-.navigation {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  justify-content: space-between;
-  background-color: rgb(22, 22, 22);
-}
-.navigation * {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.navigation *:hover {
-  background-color: rgb(80, 78, 80);
-  transition: 250ms;
 }/*# sourceMappingURL=homepage.css.map */

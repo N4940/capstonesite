@@ -1,101 +1,47 @@
 /*-~-~-//COLORS//~-~-~-*/
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #dcdcdc;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: grey;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 9px #2196F3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  max-width: 800px; /* Could be more or less, depending on screen size */
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 /*~-~-~-~-~-//GENERAL STYLE RULES//~-~-~-~-~-~*/
-.default-styles {
-  background-color: rgb(143, 143, 143);
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(210, 210, 210);
+}
+
+body {
+  margin: 0px;
+  background-color: rgb(32, 32, 32);
+}
+
+p {
+  font-size: 24pt;
+  margin: 0px 0px 1rem 0px;
+}
+
+h2 {
+  font-size: 36pt;
+  margin: 0px 0px 0.75rem 0px;
+}
+
+.navigation {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  justify-content: space-between;
+  background-color: rgb(22, 22, 22);
+}
+.navigation * {
+  color: rgb(210, 210, 210);
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation *:hover {
+  background-color: rgb(80, 78, 80);
+  transition: 250ms;
+}
+
+.top-level-margin {
+  margin: 0px 13vw 0px 13vw;
 }
 
 .unstyled-list {
@@ -108,10 +54,84 @@ input:checked + .slider:before {
 }
 
 .description {
-  color: rgb(230, 230, 230);
-  background-color: rgb(123, 123, 123);
+  color: rgb(32, 32, 32);
+  display: block;
   position: relative;
-  top: 50;
-  left: 50;
-  transform: translate(-50%, -50%);
+}
+
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  margin: auto;
+}
+
+.center-children {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rounded-box {
+  border: 5px solid rgb(12, 12, 12);
+  border-radius: 15px;
+  background: rgb(250, 250, 250);
+  padding: 1rem;
+}
+
+.title-section {
+  font-size: 26pt;
+}
+
+.top-navigation {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  justify-content: space-between;
+  background-color: rgb(143, 143, 143);
+}
+.top-navigation * {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-navigation *:hover {
+  background-color: rgb(210, 210, 210);
+  transition: 250ms;
+}
+
+.img-con {
+  height: 100%;
+  width: 100%;
+}
+.img-con img {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.horiz-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.two-column-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.grid-center {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+}
+
+.center-grid-children {
+  align-items: center;
+  justify-items: center;
 }/*# sourceMappingURL=general.css.map */

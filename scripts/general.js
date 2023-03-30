@@ -21,20 +21,24 @@ targets.forEach(target => {
 })
 //messegebox on click 
 function addDesc(descTar, description){
-    descTar.childNode.forEach(childNode => {
-        if(childNode.classList.contains("description")){
-           childNode.remove() 
-        }
-    })
-    let descEl = document.createElement("div")
+    console.log(typeof descTar + descTar)
+    for(let child of descTar.children){
+        if(child.classList.contains("description")){
+            child.remove() 
+         }
+    }     
+    let descEl = document.createElement("p")
     if(typeof description == "string"){
         console.log(description)
         descEl.innerHTML = description
     }
     descEl.classList.add("description")
     descTar.appendChild(descEl)
-}
+    setTimeout(()=>{
+        descEl.remove()
+    }, 3000)
 
+}
 
 //modal display
 function displayModal(id){
@@ -55,4 +59,32 @@ function displayModal(id){
     }
 }
 
+function addclass(targObj, className){
+    if(targObj.classList.contains(className)){
+        return
+    }
+    targObj.classList.add(className) 
+}
+function removeclass(targObj, className){
+    if(!targObj.classList.contains(className)){
+        targObj.classList.remove(className)
+    }
+    return
+}
+
+//scroll gallary 
+let scrollContainer = querySelectorAll(".gallery")
+let backBtn = querySelectorAll(".backBtn")
+let nextBtn = querySelectorAll(".nextBtn")
+
+nextBtn.EventListener("click", ()=>{
+    scrollContainer.scrollLeft += 1920;
+})
+backBtn.EventListener("click", ()=>{
+    scrollContainer.scrollRight += 1920;
+})
+
+
+
 //general custom elements ###############################
+    //Design control panel

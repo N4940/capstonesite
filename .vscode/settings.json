@@ -1,0 +1,11 @@
+{
+    "powermode.enabled": false,
+    "powermode.combo.counterSize": 3,
+    "powermode.shake.intensity": 0,
+    "powermode.combo.threshold": 5,
+    "powermode.combo.location": "default",
+    "powermode.combo.timerEnabled": "hide",
+    "powermode.explosions.frequency": 4,
+    "powermode.explosions.maxExplosions": 4,
+    "powermode.explosions.size": 8
+}
