@@ -71,20 +71,3 @@ function removeclass(targObj, className){
     }
     return
 }
-
-//scroll gallary 
-let scrollContainer = querySelectorAll(".gallery")
-let backBtn = querySelectorAll(".backBtn")
-let nextBtn = querySelectorAll(".nextBtn")
-
-nextBtn.EventListener("click", ()=>{
-    scrollContainer.scrollLeft += 1920;
-})
-backBtn.EventListener("click", ()=>{
-    scrollContainer.scrollRight += 1920;
-})
-
-
-
-//general custom elements ###############################
-    //Design control panel

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/pages/DeceptivePages/deceptivestyle.css">
+    <script src="https://kit.fontawesome.com/733f6f28f5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class = "navigation">
+        <h1>Exhibit 1: Deceptive Design</h1>
+        <button id="about" onclick="toggleModal('demo-about',false)"><i class = "fa-solid fa-info" style="color:white;"></i></button>
+        <button id="settingsdropdown" onclick="toggleModal('extra-settings',false)"> <i class="fa-solid fa-bars" style="color:white"></i></button>
+        <button><i class="fa-solid fa-home"></i></button>
+        <button> <i class="fa-solid fa-images"></i> </button>
+        <button> <i class="fa-solid fa-question"></i></button>
+    </div>
+
+    <div id="demo-about">
+        <h3>Deceptive Design</h3>
+        <p>Deceptive design is the practice of coercing users into a certain action by controlling what various aspects of a desgn to control human pschology. Observe how simple it is to create an account, then see how difficult it is to delete it.</p>
+    </div>
+    
+    
+    <div id="site-intro">
+        <div>
+            <h1>Hello welcome to this awsome service, join us</h1>
+            <h4>Sign-up today!!!!</h4>
+            <button id="create-account" onclick="showModal('login-modal',true)"> Create Account </button>
+        </div>
+    </div>
+
+    <div id="login-modal" class="classic-modal">
+        <section id="create-account">
+            <label for="email">Imaginary Email</label>
+            <input type="text" id="email" placeholder="it's not real">
+            
+            <label for="password">Imaginary password</label>
+            <input type="password" id="password" placeholder="security's important" > 
+            
+            <label for="showpassword">
+                <input type="checkbox" onclick="" id="showpassword">
+                Show Password
+            </label>
+            
+
+            <label for="ccn">Card number</label>
+            <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+            
+            <label for="remember">
+            <input type="checkbox">
+            Remember me
+            </label>
+            <button id="confirm" onclick="reroute('/pages/DeceptivePages/deceptivedeleteaccount.html')">Confirm</button>
+        </section>
+    </div>
+    <script src="/pages/DeceptivePages/Deceptive.js"></script>
+ </body>
+</html>
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallary</title>
+    <script src="https://kit.fontawesome.com/733f6f28f5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/pages/miscGlobal.css">
+    <link rel="stylesheet" href="/pages/homepages/Gallery.css">
+</head>
+<body>
+    <div class = "navigation"> 
+        <button onclick = "linkTo('/pages/homepages/gallery.html')">  <i class="fa-solid fa-images"></i></button>
+        <button onclick = "linkTo('/index.html')"><i class="fa-solid fa-home"></i></button>
+        <button onclick = "linkTo('/pages/homepages/about.html')"><i class = "fa-solid fa-info" style="color:white;"></i></button>
+    </div>
+    <div id="gallery-parent">
+
+        <button onclick="plusSlides(-1)" class="left-arrow"> <i class="fa-solid fa-chevron-left"></i> </button>
+
+        <section id = "gallery-carousel">
+                        
+            <div class = "gallery-item">
+                <div class ="content">
+                    <img  src="/Colortheory-01.png" alt="Preview Image" onclick="linkTo('/pages/Colortheory/colortheory.html');">
+                    <div class = "fade-in-taxt"> 
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, fugit expedita vero sequi inventore repellat, similique impedit eius possimus perferendis recusandae incidunt eos omnis?
+                    </div>
+                </div>
+            </div>
+
+            <div class = "gallery-item">
+                <div class ="content">
+                    <img  src="/Layout-01.png" alt="Preview Image" onclick="linkTo('/pages/colortheory.html');">
+                    <div class = "fade-in-taxt"> 
+                        from repellat, similique impedit eius possimus perferendis recusandae incidunt eos omnis?
+                    </div>
+                </div>
+            </div>
+            
+            
+        </section>
+
+
+        <button onclick="plusSlides(1)" class = "right-arrow"> <i class="fa-solid fa-chevron-right"></i> </button>
+    </div>
+    <script src="GalleryLogic.js" ></script>
+    <script src="/scripts/general.js"></script>
+
+</body>
+</html>
