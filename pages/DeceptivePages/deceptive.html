@@ -6,56 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/pages/DeceptivePages/deceptivestyle.css">
+    <link rel="stylesheet" href="/pages/miscGlobal.css">
     <script src="https://kit.fontawesome.com/733f6f28f5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class = "navigation">
-        <h1>Exhibit 1: Deceptive Design</h1>
-        <button id="about" onclick="toggleModal('demo-about',false)"><i class = "fa-solid fa-info" style="color:white;"></i></button>
-        <button id="settingsdropdown" onclick="toggleModal('extra-settings',false)"> <i class="fa-solid fa-bars" style="color:white"></i></button>
-        <button><i class="fa-solid fa-home"></i></button>
-        <button> <i class="fa-solid fa-images"></i> </button>
-        <button> <i class="fa-solid fa-question"></i></button>
+    <div class = "navigation"> 
+        <button onclick = "linkTo('/pages/homepages/gallery.html')">  <i class="fa-solid fa-images"></i></button>
+        <button onclick = "linkTo('/index.html')"><i class="fa-solid fa-home"></i></button>
+        <button onclick = "linkTo('/pages/homepages/about.html')"><i class = "fa-solid fa-info"></i></button>
     </div>
-
-    <div id="demo-about">
-        <h3>Deceptive Design</h3>
-        <p>Deceptive design is the practice of coercing users into a certain action by controlling what various aspects of a desgn to control human pschology. Observe how simple it is to create an account, then see how difficult it is to delete it.</p>
-    </div>
-    
-    
-    <div id="site-intro">
-        <div>
-            <h1>Hello welcome to this awsome service, join us</h1>
-            <h4>Sign-up today!!!!</h4>
-            <button id="create-account" onclick="showModal('login-modal',true)"> Create Account </button>
+    <div id = "demo-wrapper">
+        <div id="hero-section">
+            <img id = "hero-background" src="/Images/darkbg.png" alt="">
+            <h1 id="title">Deceptive design</h1>
         </div>
-    </div>
+        <div id = "front-page-paragraph">
+            <p>
+                Deceptive-design or dark-design refers to those annoying, sneaky or dishonest elements in a service (usually digital), this can be in the form of onnoying cookie settings popups and manipulative language all of which are used to get something from you the user that you would not usually give.
+            </p>
+           
+            <div class = "paragraph-image">
+                <img src="/Images/w-t-f-dark-pattern-design.webp" alt="">
+                <div id="demo-container">
+                    
+                </div>
+            </div>
+            <p>
+            One example of a deceptive design is in cookie privacy settings. These settings usually come the options that enable all cookies or a button to accept all with a seperate less noticable button to actually use your specifications. 
+            </p>
+            <div class="paragraph-image"  >
+                <img src="/Images/amazon-deletion-3.png" alt="">
+                <div id="demo-container">
+                    
+                </div>
+            </div>
+            <p>
+                another common practice is making it very easy to sighn up for a service but nearly impossible to delete your account. this is done because if a company can keep your email and your account you may have a higher chance of using them in the future or maybe they can continue to use adn sell your user data
+                You can find more on decpective design on deceptive.design  
+            </p>
+            <div id = "next-or-back">
+                <button onclick="linkTo('/pages/Layout/layout.html');"><i class = "fa-solid fa-arrow-left"></i></button>
+                <button onclick="linkTo('/pages/Colortheory/colortheory.html');" ><i class = "fa-solid fa-arrow-right"></i> </button>
+            </div>
+        </div>
+   
 
-    <div id="login-modal" class="classic-modal">
-        <section id="create-account">
-            <label for="email">Imaginary Email</label>
-            <input type="text" id="email" placeholder="it's not real">
-            
-            <label for="password">Imaginary password</label>
-            <input type="password" id="password" placeholder="security's important" > 
-            
-            <label for="showpassword">
-                <input type="checkbox" onclick="" id="showpassword">
-                Show Password
-            </label>
-            
-
-            <label for="ccn">Card number</label>
-            <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
-            
-            <label for="remember">
-            <input type="checkbox">
-            Remember me
-            </label>
-            <button id="confirm" onclick="reroute('/pages/DeceptivePages/deceptivedeleteaccount.html')">Confirm</button>
-        </section>
-    </div>
+        <script src="/scripts/general.js"></script>
     <script src="/pages/DeceptivePages/Deceptive.js"></script>
  </body>
 </html>
