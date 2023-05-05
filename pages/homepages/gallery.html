@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallary</title>
+    <title>Gallery</title>
     <script src="https://kit.fontawesome.com/733f6f28f5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/pages/miscGlobal.css">
     <link rel="stylesheet" href="/pages/homepages/Gallery.css">
@@ -15,52 +15,122 @@
         <button onclick = "linkTo('/index.html')"><i class="fa-solid fa-home"></i></button>
         <button onclick = "linkTo('/pages/homepages/about.html')"><i class = "fa-solid fa-info" style="color:white;"></i></button>
     </div>
-    <div id="gallery-parent">
-
-        <button onclick="plusSlides(-1)" class="left-arrow"> <i class="fa-solid fa-chevron-left"></i>
-        <!-- <img src="/Images/radial_half-01.png" alt=""> -->
-        </button>
-
+    <div id="gallery-parent">       
         <section id = "gallery-carousel">
                         
             <div class = "gallery-item">
                 <div class ="content">
                     <img  src="/Images/GardenZenArtTrendBlog.png" alt="Preview Image" onclick="linkTo('/pages/Colortheory/colortheory.html');">
-                    <div class = "fade-in-taxt"> 
-                        The way color affects you.
-                    </div>
+                </div>
+                <div>Color</div>
+                <div> 
+                    The way color affects you.
                 </div>
             </div>
 
             <div class = "gallery-item">
                 <div class ="content">
                     <img  src="/Images/dab-ii-abstract-circles-dots-non-objective-watercolor-tina-lavoie.jpg" alt="Preview Image" onclick="linkTo('/pages/Layout/layout.html');">
-                    <div class = "fade-in-taxt"> 
-                        Layout, the format and hierarchy of a given design.
-                    </div>
+                </div>
+                <div>Layout</div>
+                <div> 
+                    Layout, the format and hierarchy of a given design.
                 </div>
             </div>
 
             <div class = "gallery-item">
                 <div class ="content">
                     <img  src="/Images/blackwhite1.jpg" alt="Preview Image" onclick="linkTo('/pages/DeceptivePages/deceptive.html');">
-                    <div class = "fade-in-taxt"> 
-                        The design tools used to manipulate users.
-                    </div>
+                </div>
+                <div>Deception</div>
+                <div> 
+                    The design tools used to manipulate users.
                 </div>
             </div>
             
-            
         </section>
 
+        <div id="gallery-info">
 
-        <button onclick="plusSlides(1)" class = "right-arrow">
-            <i class="fa-sharp fa-solid fa-chevron-right"></i> 
-            <!-- <img src="/Images/radial_half-01.png" alt=""> -->
-        </button>
+            <h1 id="item-title">
+                Lorem ipsum dolor sit amet.
+            </h1>
+            <p id="item-decription">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id natus quibusdam laudantium, optio provident eius? Dolore recusandae, incidunt ab culpa doloremque suscipit iusto cum atque aspernatur odit rerum facilis debitis!
+            </p>
+            <button onclick="plusSlides(-1)" class="gallery-button left-arrow"> <i class="fa-solid fa-chevron-left"></i>
+                <!-- <img src="/Images/radial_half-01.png" alt=""> -->
+                </button>
+        
+                <button onclick="plusSlides(1)" class = "gallery-button right-arrow">
+                    <i class="fa-sharp fa-solid fa-chevron-right"></i> 
+                    <!-- <img src="/Images/radial_half-01.png" alt=""> -->
+                </button>
+        </div>
     </div>
-    <script src="GalleryLogic.js" ></script>
+    <script src="GalleryLogic.js" >   
+    
+    </script>
     <script src="/scripts/general.js"></script>
 
 </body>
 </html>
+<script>
+    var CaroselTitle = document.getElementById("item-title");  
+    var CarosalDecription = document.getElementById("item-decription");
+    var galleryCarousel = document.getElementById("gallery-carousel");
+    var galleryItems = galleryCarousel.children;
+    console.log(galleryItems);
+    
+    let slideIndex = 1;
+    showSlides(slideIndex)
+
+    function plusSlides(n){
+        showSlides(slideIndex += n)
+    }
+    function currentSlide(n){
+        showSlides(slideIndex = n)
+    }
+    function showSlides(n){
+        let i;
+        let slides = document.getElementsByClassName("gallery-item");
+
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+        updateItemInfo();
+    }
+    function updateItemInfo(){
+        console.log("updateItemInfo");
+        for(var i = 0; i < galleryItems.length; i++){  
+            var galleryItem = galleryItems[i];
+            if(galleryItem.style.display !== "none"){
+                console.log(galleryItem);
+                console.log(galleryItem.children);
+
+                var content = galleryItem.children[0];
+                console.log(content);
+                
+                var title = galleryItem.children[1];
+                console.log(title);
+                
+                var description = galleryItem.children[2];
+                console.log(description);
+
+                description.style.display = "none";
+                title.style.display = "none";
+
+                CaroselTitle.innerHTML = title.innerHTML;
+                CarosalDecription.innerHTML = description.innerHTML;
+
+            }
+        }
+    }
+</script>
