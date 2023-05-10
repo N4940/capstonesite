@@ -21,20 +21,14 @@ body{
   transition: 10s ; 
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.gallery-item:hover .content{  
+.gallery-item .content:hover{  
   transform: scale(1.5, 1.5);
   transition: 30s; 
 }
 .content{
   height:100%;
 }
-.gallery-item>.content{
-  display: grid;
-  grid-template-rows: auto 20%;
-  height: 100vh;
-  align-items: center;
-  justify-items: center;    
-}
+
 .gallery-item>.content>img{
   object-fit:cover;
   width: 100%;
@@ -59,8 +53,12 @@ body{
 /* buttons */
 .gallery-button{
   border: none;
+  background-color:#d8d8d8;
   
   border-bottom: 1px solid #000;
+}
+.gallery-button:hover{
+ background-color:#acacac ;
 }
 .right-arrow{
   
