@@ -37,7 +37,8 @@ body{
 }
 
 .navigation>*:hover{
-    color:#898989
+    color:#898989;
+    cursor:pointer;
 }
 .navigation>*:nth-child(1){
     grid-area: c1;
