@@ -22,7 +22,7 @@
                 <div class ="content">
                     <img  src="/Images/GardenZenArtTrendBlog.png" alt="Preview Image" onclick="linkTo('/pages/Colortheory/colortheory.html');">
                 </div>
-                <div>Color</div>
+                <div>COLOR</div>
                 <div> 
                     The way color affects you.
                 </div>
@@ -34,7 +34,7 @@
                 </div>
                 <div>LAYOUT</div>
                 <div> 
-                    Layout, the format and hierarchy of a given design.
+                    The format and hierarchy of a given design.
                 </div>
             </div>
 
@@ -42,7 +42,7 @@
                 <div class ="content">
                     <img  src="/Images/blackwhite1.jpg" alt="Preview Image" onclick="linkTo('/pages/DeceptivePages/deceptive.html');">
                 </div>
-                <div>Deception</div>
+                <div>DECEPTION</div>
                 <div> 
                     The design tools used to manipulate users.
                 </div>
@@ -53,7 +53,6 @@
         <div id="gallery-info">
             <button onclick="plusSlides(-1)" class="gallery-button left-arrow"> 
                 <i class="fa-solid fa-chevron-left"></i>
-                <!-- <img src="/Images/radial_half-01.png" alt=""> -->
             </button>
             <div id="item-info-container">
                 <h1 id="item-title">
@@ -65,7 +64,6 @@
             </div>                
             <button onclick="plusSlides(1)" class = "gallery-button right-arrow">
                 <i class="fa-sharp fa-solid fa-chevron-right"></i> 
-                <!-- <img src="/Images/radial_half-01.png" alt=""> -->
             </button>
         </div>
     </div>
@@ -79,6 +77,8 @@
 <script>
     var CaroselTitle = document.getElementById("item-title");  
     var CarosalDecription = document.getElementById("item-decription");
+    var galleryInfo = document.getElementById("item-info-container");
+
     var galleryCarousel = document.getElementById("gallery-carousel");
     var galleryItems = galleryCarousel.children;
     console.log(galleryItems);
@@ -92,6 +92,8 @@
     function currentSlide(n){
         showSlides(slideIndex = n)
     }
+
+
     function showSlides(n){
         let i;
         let slides = document.getElementsByClassName("gallery-item");
@@ -107,7 +109,7 @@
         }
         slides[slideIndex-1].style.display = "block";
         updateItemInfo();
-    }
+    }   
     function updateItemInfo(){
         console.log("updateItemInfo");
         for(var i = 0; i < galleryItems.length; i++){  
@@ -130,6 +132,13 @@
 
                 CaroselTitle.innerHTML = title.innerHTML;
                 CarosalDecription.innerHTML = description.innerHTML;
+
+
+                              
+                galleryInfo.onclick = function(){
+                    console.log("click");
+                    content.children[0].click();
+                }
 
             }
         }

@@ -30,7 +30,7 @@
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   gap: 1rem;
-  margin: 3rem;
+  margin: 3rem 3rem 0rem;
 }
 @media screen and (max-width: 900px) {
   .hero-content section {
@@ -41,5 +41,5 @@
   }
 }
 .hero-content section img {
-  max-height: 90%;
+  max-height: 100%;
 }
